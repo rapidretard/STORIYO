@@ -1,0 +1,3 @@
+rootProject.name = 'storiyo-parent'
+include 'storiyo-server'
+
