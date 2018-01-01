@@ -1,4 +1,5 @@
 rootProject.name = 'storiyo-parent'
 include 'account-manager'
 include 'storiyo-ui-springboot'
+include 'story-manager'
 

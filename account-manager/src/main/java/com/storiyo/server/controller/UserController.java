@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/user")
-//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200")
 public class UserController {
 
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
@@ -21,16 +21,14 @@ public class UserController {
         this.usersRepository = usersRepository;
     }
 
+    @ResponseBody
     @PostMapping(path = "/signUp")
-    public @ResponseBody
-    String addNewUser(@RequestParam String userName,
-                      @RequestParam String userEmail,
-                      @RequestParam String userPassword) {
+    public String addNewUser(@RequestBody User user) {
         logger.info("Signing up new user");
         User newUser = new User();
-        newUser.setUserName(userName);
-        newUser.setEmail(userEmail);
-        newUser.setPassword(userPassword);
+        newUser.setUserName(user.getUserName());
+        newUser.setEmail(user.getEmail());
+        newUser.setPassword(user.getPassword());
 
         logger.debug("Inserting User: {}, in the database", newUser);
         User savedUser = usersRepository.save(newUser);
@@ -38,5 +36,4 @@ public class UserController {
 
         return "User saved successfully";
     }
-
 }

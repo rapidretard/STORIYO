@@ -1,7 +1,5 @@
 package com.storiyo.server.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,14 +7,13 @@ import javax.persistence.Id;
 @Entity
 public class User {
 
+
     @GeneratedValue
     @Id
     private Long id;
 
     private String userName;
     private String email;
-
-    @JsonIgnore
     private String password;
 
     //    Default no-arg constructor
