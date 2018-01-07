@@ -1,4 +1,4 @@
-package com.storiyo.server.model;
+package com.storiyo.account.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

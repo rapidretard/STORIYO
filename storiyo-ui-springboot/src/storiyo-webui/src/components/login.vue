@@ -1,5 +1,6 @@
 <template>
   <div>
+    <navbar/>
     <b-container>
       <b-form>
         <b-row align-h="center">
@@ -33,7 +34,9 @@
                           type="password"></b-form-input>
           </b-form-group>
         </b-row>
-        <b-button variant="primary" v-on:click="submitLogin()">Login</b-button>
+        <b-row align-h="center">
+          <b-button variant="primary" v-on:click="submitLogin()">Login</b-button>
+        </b-row>
       </b-form>
     </b-container>
   </div>
@@ -41,8 +44,10 @@
 
 <script>
   import axios from 'axios'
+  import Navbar from './navbar'
 
   export default {
+    components: {Navbar},
     name: 'login',
     data() {
       return {
@@ -54,7 +59,7 @@
 
     methods: {
       submitLogin() {
-        axios.post('http://localhost:8080/user/signUp', {
+        axios.post('http://localhost:50570/api/user/signUp', {
           userName: this.username,
           email: this.email,
           password: this.password

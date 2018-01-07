@@ -1,4 +1,4 @@
-package model;
+package com.storiyo.core.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,6 +13,11 @@ public class Story {
     private String storyTitle;
     private String storyDescription;
     private String storyBody;
+
+    //    default no-arg constructor
+    public Story() {
+
+    }
 
     public Story(String storyTitle, String storyDescription, String storyBody) {
         this.storyTitle = storyTitle;
