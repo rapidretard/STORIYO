@@ -6,14 +6,16 @@
 
       <b-navbar-brand to="home">STORIYO</b-navbar-brand>
 
+      <b-navbar-nav>
+        <b-nav-item to="login">Start a new story</b-nav-item>
+      </b-navbar-nav>
+
       <b-collapse is-nav id="nav_collapse">
-
-        <b-navbar-nav>
-          <b-nav-item to="login">Login</b-nav-item>
-        </b-navbar-nav>
-
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
+          <b-navbar-nav>
+            <b-nav-item to="login">Login</b-nav-item>
+          </b-navbar-nav>
           <b-nav-item-dropdown right>
             <!-- Using button-content slot -->
             <template slot="button-content">
