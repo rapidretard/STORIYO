@@ -1,8 +1,0 @@
-security:
- oauth2:
-  client:
-    id: 26rardpfbq7cjweqjh5h6ts8
-    client-secret: C5Pyh4UrKS
-    access-token-uri: https://auth.domain.com.au/v1/connect/token
-    authentication-scheme: header
-
